@@ -96,13 +96,17 @@
 <div class="p-4 lg:ml-64 bg-blue-950">
   <!-- THIS IS THE CONTAINER WHERE THE SUBJECTS APPEAR -->
   <div class="p-4 bg-gray-200 rounded-lg mt-14">
-    <div class="flex gap-4 mb-4">
+    <div class="flex flex-wrap gap-4 mb-4">
 
       <!-- LEFT SIDE SECTION -->
-      <div class=" w-3/4">
+      <div class="lg:w-[calc(75%-16px)] w-full">
         <!-- HERO BANNER -->
-      <div class="h-20 shadow-xl rounded-lg bg-blue-400 flex justify-center text-white"></div>
+        <div class="h-20 shadow-xl rounded-lg bg-blue-400 flex flex-col justify-center text-white pl-4">
+          <h1 class="lg:text-2xl text-xl font-bold">Welcome to Our Platform</h1>
+          <p class="lg:text-sm text-xs lg:text-base mt-1">Your success starts here. Explore our resources and get started!</p>
+        </div>
         <!-- END OF HERO BANNER -->
+
 
         <div class=" w-full shadow-xl h-40 lg:h-80 ">
           <div class="h-[10%] mb-2">
@@ -121,27 +125,33 @@
 
 
   <!-- RIGHT SIDE SECTION -->
-      <div class="w-1/4">
+      <div class="w-full lg:w-1/4">
 
-        <div class="w-full">
+        <div class="w-full flex flex-col lg:flex-wrap">
           <div class="mb-2 h-[10%]">
             <h1 class="lg:text-xl text-xs">Subjects</h1>
           </div>
-          <div class="rounded-xl flex flex-col px-4 pt-4 pb-4 bg-blue-400">
-           
+          <div class="w-full flex flex-row space-x-2 lg:flex-col lg:space-x-0 lg:space-y-2">
+            <div class="rounded-xl flex-1 px-4 pt-4 pb-4 bg-blue-400">
+              <h1 class="text-xs text-white"><span class="text-semibold">Highest Grade:</span> MARIA-DB 99%</h1>
+            </div>
+            <div class="w-full rounded-xl flex-1 px-4 pt-4 pb-4 bg-blue-400">
+              <h1 class="text-xs text-white"><span class="text-semibold">Lowest Grade:</span> CYBER SECURITY 83%</h1>
+            </div>
           </div>
         </div>
+        
 
         <div class="w-full">
           <div class="mb-2 h-[10%]">
             <h1 class="lg:text-xl text-xs">Daily Notice</h1>
           </div>
           <div class="rounded-xl flex flex-col px-4 pt-4 pb-4 bg-blue-400">
-            <h1 class="text-sm lg:text-base text-white font-medium pb-4 lg:pb-0">Code Review Sessions</h1>
-            <p class="text-xs lg:text-sm hidden lg:block lg:pb-4">Sir Michael Martin Mariscal has requested that you participate in an online code review for your recent HTML, CSS, and Javascript project.</p>
+            <h1 class="text-sm lg:text-base text-white font-medium">Code Review Sessions</h1>
+            <p class="text-xs lg:text-sm pb-4">Sir Michael Martin Mariscal has requested that you participate in an online code review for your recent HTML, CSS, and Javascript project.</p>
   
-            <h1 class="text-sm lg:text-base text-white font-medium pb-4 lg:pb-0">Weekly Coding Quiz</h1>
-            <p class="text-xs lg:text-sm hidden lg:block lg:pb-4">Test your knowledge with the weekly coding quiz focusing on HTML and CSS. The quiz will be live from Auguest 30th to September 2nd.</p>
+            <h1 class="text-sm lg:text-base text-white font-medium">Weekly Coding Quiz</h1>
+            <p class="text-xs lg:text-sm pb-4">Test your knowledge with the weekly coding quiz focusing on HTML and CSS. The quiz will be live from Auguest 30th to September 2nd.</p>
           </div>
         </div>
 
