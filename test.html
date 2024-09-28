@@ -7,256 +7,33 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="img/logo.png" type="image/x-icon" />
 </head>
-<body class="bg-[url(img/bg.jpg)] bg-cover h-screen bg-center ">
+<body class="">
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-
-    <div class="p-4">
-        <div class="p-4 bg-white/30 backdrop-blur-md rounded-lg">
-            <div class="p-1">
-                <!-- Header Section -->
-                <div class="p-4 bg-white/30 backdrop-blur-md text-white rounded-lg">
-                    <div class="text-white flex justify-between items-center">
-                        <button id="burger" class="lg:hidden focus:outline-none">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-                          </svg>
-                        </button>
-                    
-                            <div class="flex items-center justify-start rtl:justify-end">
-                              
-                                <img src="img/logo.png" class="h-8 mr-3"/>
-                                <span class="text-xl text-white">ITrack</span>
-                             
-                            </div>  
-                      </div>
-                </div>
-            
-                <!-- Main Section with Sidebar and Content -->
-                <div class="flex mt-4">
-                    <!-- Sidebar -->
-                    <div class="z-40 flex w-2/4 lg:w-1/5 p-4 bg-black/30 lg:bg-white/30 backdrop-blur-md hidden lg:block lg:static absolute left-0.5 rounded-lg" id="sidebar">
-                        <ul class="space-y-2 font-medium">
-                            <li>
-                               <a href="home.html" class="flex items-center p-2  text-white rounded-lg hover:bg-blue-400">
-                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                                   <path fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z" clip-rule="evenodd" />
-                                   <path fill-rule="evenodd" d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z" clip-rule="evenodd" />
-                                 </svg>
-                                  <span class="ml-3">Dashboard</span>
-                               </a>
-                            </li>
-                     
-                            <li>
-                               <a href="subject.html" class="flex items-center p-2 text-white rounded-lg bg-[url(img/bg.jpg)] bg-center bg-cover">
-                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                                   <path fill-rule="evenodd" d="M17.663 3.118c.225.015.45.032.673.05C19.876 3.298 21 4.604 21 6.109v9.642a3 3 0 0 1-3 3V16.5c0-5.922-4.576-10.775-10.384-11.217.324-1.132 1.3-2.01 2.548-2.114.224-.019.448-.036.673-.051A3 3 0 0 1 13.5 1.5H15a3 3 0 0 1 2.663 1.618ZM12 4.5A1.5 1.5 0 0 1 13.5 3H15a1.5 1.5 0 0 1 1.5 1.5H12Z" clip-rule="evenodd" />
-                                   <path d="M3 8.625c0-1.036.84-1.875 1.875-1.875h.375A3.75 3.75 0 0 1 9 10.5v1.875c0 1.036.84 1.875 1.875 1.875h1.875A3.75 3.75 0 0 1 16.5 18v2.625c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625v-12Z" />
-                                   <path d="M10.5 10.5a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963 5.23 5.23 0 0 0-3.434-1.279h-1.875a.375.375 0 0 1-.375-.375V10.5Z" />
-                                 </svg>
-                                  <span class="ml-3">Subject</span>
-                               </a>
-                            </li>
-                            
-                            <li>
-                               <a href="#" class="flex items-center p-2  text-white rounded-lg hover:bg-blue-400">
-                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                                   <path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" />
-                                 </svg>
-                                  <span class="ml-3">Progress Report</span>
-                               </a>
-                            </li>
-                     
-                            <li>
-                               <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-blue-400">
-                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                                   <path d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z" />
-                                 </svg>
-                                  <span class="ml-3 ">Assignments</span>
-                               </a>
-                            </li>
-                     
-                            <li>
-                               <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-blue-400">
-                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                                   <path fill-rule="evenodd" d="M5.25 9a6.75 6.75 0 0 1 13.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 0 1-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 1 1-7.48 0 24.585 24.585 0 0 1-4.831-1.244.75.75 0 0 1-.298-1.205A8.217 8.217 0 0 0 5.25 9.75V9Zm4.502 8.9a2.25 2.25 0 1 0 4.496 0 25.057 25.057 0 0 1-4.496 0Z" clip-rule="evenodd" />
-                                 </svg>
-                                  <span class="ml-3">Notice</span>
-                               </a>
-                            </li>
-                     
-                            <li>
-                               <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-blue-400">
-                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                                   <path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 0 0-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 0 0-2.282.819l-.922 1.597a1.875 1.875 0 0 0 .432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 0 0 0 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 0 0-.432 2.385l.922 1.597a1.875 1.875 0 0 0 2.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 0 0 2.28-.819l.923-1.597a1.875 1.875 0 0 0-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 0 0 0-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 0 0-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 0 0-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 0 0-1.85-1.567h-1.843ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" clip-rule="evenodd" />
-                                 </svg>
-                                  <span class="ml-3">Settings</span>
-                               </a>
-                            </li>
-                     
-                         </ul>
-                    </div>
-            
-                    <!-- Main Content -->
-                    <div class="w-full lg:w-4/5 p-4 bg-white/30 backdrop-blur-md rounded-lg lg:ml-4 z-10 flex flex-wrap gap-4 mb-4">
-                        
-                        <div class="flex lg:flex-col h-28 lg:h-80 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
-                            <div class="h-full lg:h-1/2 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                              <div class="w-16 h-16 lg:w-24 lg:h-24 mb-2">
-                                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full object-cover w-full h-full">
-                              </div>
-                            </div>
-                            <div class="h-full lg:h-1/2 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                              <div class="text-sm lg:text-3xl font-bold mt-2">ITDB 31</div>
-                              <div class="text-center text-xs lg:text-lg">Database Management Systems</div>
-                              <div class="mt-2 text-sm">
-                                <span class="text-green-200 font-semibold">There is an assignment</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="flex lg:flex-col h-28 lg:h-80 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
-                            <div class="h-full lg:h-1/2 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                              <div class="w-16 h-16 lg:w-24 lg:h-24 mb-2">
-                                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full object-cover w-full h-full">
-                              </div>
-                            </div>
-                            <div class="h-full lg:h-1/2 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                              <div class="text-sm lg:text-3xl font-bold mt-2">IT SIA 31</div>
-                              <div class="text-center text-xs lg:text-lg">Systems Analysis and Design</div>
-                              <div class="mt-2 text-sm">
-                                <span class="text-green-200 font-semibold">There is an assignment</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="flex lg:flex-col h-28 lg:h-80 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
-                            <div class="h-full lg:h-1/2 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                              <div class="w-16 h-16 lg:w-24 lg:h-24 mb-2">
-                                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full object-cover w-full h-full">
-                              </div>
-                            </div>
-                            <div class="h-full lg:h-1/2 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                              <div class="text-sm lg:text-3xl font-bold mt-2">IT CN 31</div>
-                              <div class="text-center text-xs lg:text-lg">Computer Networks</div>
-                              <div class="mt-2 text-sm">
-                                <span class="text-green-200 font-semibold">There is an assignment</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="flex lg:flex-col h-28 lg:h-80 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
-                            <div class="h-full lg:h-1/2 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                              <div class="w-16 h-16 lg:w-24 lg:h-24 mb-2">
-                                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full object-cover w-full h-full">
-                              </div>
-                            </div>
-                            <div class="h-full lg:h-1/2 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                              <div class="text-sm lg:text-3xl font-bold mt-2">IT TPC</div>
-                              <div class="text-center text-xs lg:text-lg">Technical Project Management</div>
-                              <div class="mt-2 text-sm">
-                                <span class="text-green-200 font-semibold">There is an assignment</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="flex lg:flex-col h-28 lg:h-80 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
-                            <div class="h-full lg:h-1/2 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                              <div class="w-16 h-16 lg:w-24 lg:h-24 mb-2">
-                                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full object-cover w-full h-full">
-                              </div>
-                            </div>
-                            <div class="h-full lg:h-1/2 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                              <div class="text-sm lg:text-3xl font-bold mt-2">IT TECHNO</div>
-                              <div class="text-center text-xs lg:text-lg">Information Technology Fundamentals</div>
-                              <div class="mt-2 text-sm">
-                                <span class="text-green-200 font-semibold">There is an assignment</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="flex lg:flex-col h-28 lg:h-80 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
-                            <div class="h-full lg:h-1/2 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                              <div class="w-16 h-16 lg:w-24 lg:h-24 mb-2">
-                                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full object-cover w-full h-full">
-                              </div>
-                            </div>
-                            <div class="h-full lg:h-1/2 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                              <div class="text-sm lg:text-3xl font-bold mt-2">IT IAS 32</div>
-                              <div class="text-center text-xs lg:text-lg">Information Assurance Security</div>
-                              <div class="mt-2 text-sm">
-                                <span class="text-green-200 font-semibold">There is an assignment</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="flex lg:flex-col h-28 lg:h-80 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
-                            <div class="h-full lg:h-1/2 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                              <div class="w-16 h-16 lg:w-24 lg:h-24 mb-2">
-                                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full object-cover w-full h-full">
-                              </div>
-                            </div>
-                            <div class="h-full lg:h-1/2 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                              <div class="text-sm lg:text-3xl font-bold mt-2">IT CAP</div>
-                              <div class="text-center text-xs lg:text-lg">Application Development</div>
-                              <div class="mt-2 text-sm">
-                                <span class="text-green-200 font-semibold">There is an assignment</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="flex lg:flex-col h-28 lg:h-80 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
-                            <div class="h-full lg:h-1/2 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                              <div class="w-16 h-16 lg:w-24 lg:h-24 mb-2">
-                                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full object-cover w-full h-full">
-                              </div>
-                            </div>
-                            <div class="h-full lg:h-1/2 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                              <div class="text-sm lg:text-3xl font-bold mt-2">IT ELEC 3</div>
-                              <div class="text-center text-xs lg:text-lg">Specialized Topics in Technology</div>
-                              <div class="mt-2 text-sm">
-                                <span class="text-green-200 font-semibold">There is an assignment</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        
-
-                    </div>
-                </div>
-            </div>
-            
-
-            
-        </div>
-    </div>
-
-
-
-
-<script>
-  const burger = document.getElementById('burger');
-  const sidebar = document.getElementById('sidebar');
-
-  // Function to handle sidebar visibility based on screen size
-  function checkScreenSize() {
-    if (window.innerWidth >= 1024) {
-      sidebar.classList.remove('hidden'); // Show sidebar on large screens
-    } else {
-      sidebar.classList.add('hidden'); // Hide sidebar on mobile screens
-    }
-  }
-
-  // Initial check
-  checkScreenSize();
-
-  // Add event listener for window resize
-  window.addEventListener('resize', checkScreenSize);
-
-  // Toggle sidebar visibility on hamburger button click
-  burger.addEventListener('click', () => {
-    sidebar.classList.toggle('hidden');
-  });
-</script>
-
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 14, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
