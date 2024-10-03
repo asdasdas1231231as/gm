@@ -14,22 +14,52 @@
         <div class="p-4 bg-white/30 backdrop-blur-md rounded-lg">
             <div class="p-1">
                 <!-- Header Section -->
-                <div class="p-4 bg-white/30 backdrop-blur-md text-white rounded-lg">
-                    <div class="text-white flex justify-between items-center">
-                        <button id="burger" class="lg:hidden focus:outline-none">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-                          </svg>
-                        </button>
-                    
-                            <div class="flex items-center justify-start rtl:justify-end">
-                              
-                                <img src="img/logo.png" class="h-8 mr-3"/>
-                                <span class="text-xl text-white">ITrack</span>
-                             
-                            </div>  
-                      </div>
-                </div>
+                <div class="p-4 bg-white/30 backdrop-blur-md text-white rounded-lg mb-4">
+                  <div class="text-white flex justify-between items-center">
+                      <button id="burger" class="lg:hidden focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+                  
+                          <div class="flex items-center justify-start rtl:justify-end">
+                            
+                              <img src="img/logo.png" class="h-8 mr-3"/>
+                              <span class="text-xl text-white mr-3">ITrack</span>
+                           
+                          </div>  
+
+                          <form class="hidden lg:block">
+                            <div class="relative">
+                              <input type="text" class="w-full py-3 pl-10 pr-4 text-gray-700 bg-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Search...">
+                              <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <circle cx="11" cy="11" r="8"></circle>
+                                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                              </div>
+                            </div>
+                          </form>
+
+                          <div class="h-[30px] w-[30px] bg-black rounded-full">
+                            <img src="img/dp.jpg" class="h-full w-full rounded-full" alt="">
+                          </div>
+                    </div>
+              </div>
+
+              <div class="p-4 bg-white/30 backdrop-blur-md text-white rounded-lg lg:hidden">
+                <form>
+                  <div class="relative">
+                    <input type="text" class="w-full py-3 pl-10 pr-4 text-gray-700 bg-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Search...">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      </svg>
+                    </div>
+                  </div>
+                </form>
+              </div>
             
                 <!-- Main Section with Sidebar and Content -->
                 <div class="flex mt-4">
@@ -189,33 +219,25 @@
                         
                         
 
-                        <div class="w-64 h-56 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg p-4 flex flex-col justify-between text-white">
-                          <div>
-                            <h2 class="text-xl font-bold mb-2">IT Fundamentals</h2>
-                            <p class="mb-1">Instructor: John Doe</p>
-                            <p class="mb-1">Due Date: Oct 15, 2024</p>
-                            <p>Last Updated: Sept 2024</p>
-                          </div>
-                          <div>
-                            <p class="mb-2">Completion: 75%</p>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                              <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
-                            </div>
-                          </div>
-                        </div>
+                       
                         
 
                         <a href="ssubject.html" class="flex lg:flex-col h-28 lg:h-64 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
                        
-                          <div class="h-full lg:h-4/5 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                            <div class="w-16 h-16 lg:w-16 lg:h-16 mb-2">
-                              
-                            </div>
+                          <div class="h-full lg:h-4/5 w-1/4 lg:w-full flex flex-col p-4 text-white justify-center">
+                           
+                              <h2 class="hidden lg:block text-xl font-bold mb-2">Database Management Systems
+                              </h2>
+                              <h2 class="block lg:hidden">IT DB31</h2>
+                              <p class="hidden lg:block mb-1">Instructor: Martin Mariscal</p>
+                              <p class="hidden lg:block mb-1">Due Date: Oct 15, 2024</p>
+                              <p class="hidden lg:block ">Last Updated: Sept 2024</p>
+                            
                           </div>
                           <div class="h-full lg:h-1/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                            <p class="mb-2">Completion: 75%</p>
+                            <p class="mb-2">Completion: 80%</p>
                             <div class="w-full bg-gray-200 rounded-full h-2">
-                              <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+                              <div class="bg-green-500 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                           </div>
                       
@@ -223,16 +245,19 @@
 
                       <a href="ssubject.html" class="flex lg:flex-col h-28 lg:h-64 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
                        
-                        <div class="h-full lg:h-2/5 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                          <div class="w-16 h-16 lg:w-16 lg:h-16 mb-2">
-                            <img src="img/dp.jpg"  class="rounded-full object-cover w-full h-full">
-                          </div>
+                        <div class="h-full lg:h-4/5 w-1/4 lg:w-full flex flex-col p-4 text-white justify-center">
+                         
+                            <h2 class="hidden lg:block text-xl font-bold mb-2">Systems Analysis and Design</h2>
+                            <h2 class="block lg:hidden">IT SIA31</h2>
+                            <p class="hidden lg:block mb-1">Instructor: Martin Mariscal</p>
+                            <p class="hidden lg:block mb-1">Due Date: Oct 15, 2024</p>
+                            <p class="hidden lg:block ">Last Updated: Sept 2024</p>
+                          
                         </div>
-                        <div class="h-full lg:h-3/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                          <div class="text-sm lg:text-3xl font-bold mt-2">IT CN 31</div>
-                          <div class="text-center text-xs lg:text-lg">Computer Networks</div>
-                          <div class="mt-2 text-sm">
-                            <span class="text-green-200 font-semibold">There is an assignment</span>
+                        <div class="h-full lg:h-1/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
+                          <p class="mb-2">Completion: 75%</p>
+                          <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
                           </div>
                         </div>
                     
@@ -240,16 +265,19 @@
 
                     <a href="ssubject.html" class="flex lg:flex-col h-28 lg:h-64 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
                        
-                      <div class="h-full lg:h-2/5 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                        <div class="w-16 h-16 lg:w-16 lg:h-16 mb-2">
-                          <img src="img/dp.jpg"  class="rounded-full object-cover w-full h-full">
-                        </div>
+                      <div class="h-full lg:h-4/5 w-1/4 lg:w-full flex flex-col p-4 text-white justify-center">
+                       
+                          <h2 class="hidden lg:block text-xl font-bold mb-2">Computer Networks</h2>
+                          <h2 class="block lg:hidden">IT CN31</h2>
+                          <p class="hidden lg:block mb-1">Instructor: Martin Mariscal</p>
+                          <p class="hidden lg:block mb-1">Due Date: Oct 15, 2024</p>
+                          <p class="hidden lg:block ">Last Updated: Sept 2024</p>
+                        
                       </div>
-                      <div class="h-full lg:h-3/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                        <div class="text-sm lg:text-3xl font-bold mt-2">IT TPC</div>
-                        <div class="text-center text-xs lg:text-lg">Technical Project Management</div>
-                        <div class="mt-2 text-sm">
-                          <span class="text-green-200 font-semibold">There is an assignment</span>
+                      <div class="h-full lg:h-1/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
+                        <p class="mb-2">Completion: 100%</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                          <div class="bg-green-500 h-2 rounded-full" style="width: 100%"></div>
                         </div>
                       </div>
                   
@@ -257,16 +285,19 @@
 
                   <a href="ssubject.html" class="flex lg:flex-col h-28 lg:h-64 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
                        
-                    <div class="h-full lg:h-2/5 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                      <div class="w-16 h-16 lg:w-16 lg:h-16 mb-2">
-                        <img src="img/dp.jpg"  class="rounded-full object-cover w-full h-full">
-                      </div>
+                    <div class="h-full lg:h-4/5 w-1/4 lg:w-full flex flex-col p-4 text-white justify-center">
+                     
+                        <h2 class="hidden lg:block text-xl font-bold mb-2">Technical Project Management</h2>
+                        <h2 class="block lg:hidden">IT TPC</h2>
+                        <p class="hidden lg:block mb-1">Instructor: Martin Mariscal</p>
+                        <p class="hidden lg:block mb-1">Due Date: Oct 15, 2024</p>
+                        <p class="hidden lg:block ">Last Updated: Sept 2024</p>
+                      
                     </div>
-                    <div class="h-full lg:h-3/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                      <div class="text-sm lg:text-3xl font-bold mt-2">IT TECHNO</div>
-                      <div class="text-center text-xs lg:text-lg">Information Technology Fundamentals</div>
-                      <div class="mt-2 text-sm">
-                        <span class="text-green-200 font-semibold">There is an assignment</span>
+                    <div class="h-full lg:h-1/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
+                      <p class="mb-2">Completion: 60%</p>
+                      <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 60%"></div>
                       </div>
                     </div>
                 
@@ -274,16 +305,19 @@
 
                 <a href="ssubject.html" class="flex lg:flex-col h-28 lg:h-64 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
                        
-                  <div class="h-full lg:h-2/5 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                    <div class="w-16 h-16 lg:w-16 lg:h-16 mb-2">
-                      <img src="img/dp.jpg"  class="rounded-full object-cover w-full h-full">
-                    </div>
+                  <div class="h-full lg:h-4/5 w-1/4 lg:w-full flex flex-col p-4 text-white justify-center">
+                   
+                      <h2 class="hidden lg:block text-xl font-bold mb-2">Information Technology Fundamentals</h2>
+                      <h2 class="block lg:hidden">IT TECHNO</h2>
+                      <p class="hidden lg:block mb-1">Instructor: Martin Mariscal</p>
+                      <p class="hidden lg:block mb-1">Due Date: Oct 15, 2024</p>
+                      <p class="hidden lg:block ">Last Updated: Sept 2024</p>
+                    
                   </div>
-                  <div class="h-full lg:h-3/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                    <div class="text-sm lg:text-3xl font-bold mt-2">IT IAS 32</div>
-                    <div class="text-center text-xs lg:text-lg">Information Assurance Security</div>
-                    <div class="mt-2 text-sm">
-                      <span class="text-green-200 font-semibold">There is an assignment</span>
+                  <div class="h-full lg:h-1/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
+                    <p class="mb-2">Completion: 75%</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                      <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
                     </div>
                   </div>
               
@@ -291,16 +325,19 @@
 
               <a href="ssubject.html" class="flex lg:flex-col h-28 lg:h-64 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
                        
-                <div class="h-full lg:h-2/5 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                  <div class="w-16 h-16 lg:w-16 lg:h-16 mb-2">
-                    <img src="img/dp.jpg"  class="rounded-full object-cover w-full h-full">
-                  </div>
+                <div class="h-full lg:h-4/5 w-1/4 lg:w-full flex flex-col p-4 text-white justify-center">
+                 
+                    <h2 class="hidden lg:block text-xl font-bold mb-2">Information Assurance Security</h2>
+                    <h2 class="block lg:hidden">IT IAS32</h2>
+                    <p class="hidden lg:block mb-1">Instructor: Martin Mariscal</p>
+                    <p class="hidden lg:block mb-1">Due Date: Oct 15, 2024</p>
+                    <p class="hidden lg:block ">Last Updated: Sept 2024</p>
+                  
                 </div>
-                <div class="h-full lg:h-3/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                  <div class="text-sm lg:text-3xl font-bold mt-2">IT CAP</div>
-                  <div class="text-center text-xs lg:text-lg">Application Development</div>
-                  <div class="mt-2 text-sm">
-                    <span class="text-green-200 font-semibold">There is an assignment</span>
+                <div class="h-full lg:h-1/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
+                  <p class="mb-2">Completion: 75%</p>
+                  <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
                   </div>
                 </div>
             
@@ -308,21 +345,47 @@
 
             <a href="ssubject.html" class="flex lg:flex-col h-28 lg:h-64 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
                        
-              <div class="h-full lg:h-2/5 w-1/4 lg:w-full flex flex-col items-center justify-center">
-                <div class="w-16 h-16 lg:w-16 lg:h-16 mb-2">
-                  <img src="img/dp.jpg"  class="rounded-full object-cover w-full h-full">
-                </div>
+              <div class="h-full lg:h-4/5 w-1/4 lg:w-full flex flex-col p-4 text-white justify-center">
+               
+                  <h2 class="hidden lg:block text-xl font-bold mb-2">Application Development</h2>
+                  <h2 class="block lg:hidden">IT CAP</h2>
+                  <p class="hidden lg:block mb-1">Instructor: Martin Mariscal</p>
+                  <p class="hidden lg:block mb-1">Due Date: Oct 15, 2024</p>
+                  <p class="hidden lg:block ">Last Updated: Sept 2024</p>
+                
               </div>
-              <div class="h-full lg:h-3/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
-                <div class="text-sm lg:text-3xl font-bold mt-2">IT ELEC 3</div>
-                <div class="text-center text-xs lg:text-lg">Specialized Topics in Technology</div>
-                <div class="mt-2 text-sm">
-                  <span class="text-green-200 font-semibold">There is an assignment</span>
+              <div class="h-full lg:h-1/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
+                <p class="mb-2">Completion: 75%</p>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
                 </div>
               </div>
           
           </a>
 
+
+          <a href="ssubject.html" class="flex lg:flex-col h-28 lg:h-64 w-full lg:w-72 hover:shadow-xl rounded-lg overflow-hidden bg-black/40 backdrop-blur-md">
+                       
+            <div class="h-full lg:h-4/5 w-1/4 lg:w-full flex flex-col p-4 text-white justify-center">
+             
+                <h2 class="hidden lg:block text-xl font-bold mb-2">Specialized Topics in Technology</h2>
+                <h2 class="block lg:hidden">IT ELEC3</h2>
+                <p class="hidden lg:block mb-1">Instructor: Martin Mariscal</p>
+                <p class="hidden lg:block mb-1">Due Date: Oct 15, 2024</p>
+                <p class="hidden lg:block ">Last Updated: Sept 2024</p>
+              
+            </div>
+            <div class="h-full lg:h-1/5 w-3/4 lg:w-full bg-[url(img/bg.jpg)] bg-cover bg-center flex flex-col lg:items-center justify-center text-white p-4">
+              <p class="mb-2">Completion: 75%</p>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+        
+        </a>
+            
+
+                      
 
                         
 
